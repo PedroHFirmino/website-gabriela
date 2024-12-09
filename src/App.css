@@ -1,7 +1,7 @@
-
 .App {
   /* text-align: center; */
   flex-direction: column;
+  
 
 
 }
@@ -38,6 +38,8 @@
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  margin: 0px;
+  padding: 0px;
 
 }
 
@@ -51,6 +53,13 @@
   font-weight: 500;
   text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 
+}
+
+.App h1:hover {
+  color: #ffcccb; 
+  transform: scale(1.1); 
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+  transition: all 0.3s ease;
 }
 
 @font-face {
@@ -77,6 +86,7 @@
   text-align: center;
   margin: 0 auto;
   width: 100%;
+  
 }
 
 /* Smartphone */
@@ -131,12 +141,63 @@
 }
 
 
-#body-title{
+#body-title {
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(65, 65, 65);
   display: flex;
+  align-items: center; 
+  justify-content: center;  
   text-align: center;
-  
+  font-size: 1.5rem; 
+  margin: 2rem;
+  position: relative;
+  padding: 0 100px;
 }
 
+#body-title::before,
+#body-title::after {
+  content: '';
+  position: absolute;
+  height: 1px; 
+  background-color: rgba(65, 65, 65, 0.5);
+  padding: 0 50px;  
+}
+
+#body-title::before {
+  left: 0;
+  top: 50%;
+  width: 50px;  /* Comprimento da linha esquerda */
+}
+
+#body-title::after {
+  right: 0;
+  top: 50%;
+  width: 50px;  
+}
+
+/* Smartphone */
+@media (max-width: 767px) {
+  #body-title {
+    font-size: 1.2rem;  
+    padding: 0 20px; 
+  }
+
+  #body-title::before,
+  #body-title::after {
+    width: 30px;  
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  #body-title {
+    font-size: 2rem; 
+    padding: 0 10px;  
+  }
+
+  #body-title::before,
+  #body-title::after {
+    width: 70px;  
+  }
+}
 

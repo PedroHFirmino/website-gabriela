@@ -49,6 +49,28 @@ function App() {
           description="Oi, eu sou a Gabriela de Minas Gerais - Brasil" 
           linkText="Ver mais"
         />
+                <Card 
+          title="Cronograma de estudos" 
+          description="Oi, eu sou a Gabriela de Minas Gerais - Brasil" 
+          linkText="Ver mais"
+        />
+                <Card 
+          title="E-book Gabriela" 
+          description="Esse é meu e-book teste criando o site" 
+          linkText="Ver mais"
+        />
+        <Card 
+          title="Cronograma de estudos" 
+          description="Oi, eu sou a Gabriela de Minas Gerais - Brasil" 
+          linkText="Ver mais"
+        />
+                <Card 
+          title="Cronograma de estudos" 
+          description="Oi, eu sou a Gabriela de Minas Gerais - Brasil" 
+          linkText="Ver mais"
+        />
+        
+        
         
       </div>
     </div>
