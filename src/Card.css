@@ -1,0 +1,53 @@
+/* Card.css */
+.card-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
+  }
+  .card-container a:hover{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 200;
+    font-size: 25px;
+    transition: all 0.3s ease;
+  }
+
+  
+  .card {
+    background: #ffcccb;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    /* text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+    color: rgb(65, 65, 65);
+  }
+
+  
+  .card-description {
+    font-size: 1rem;
+    color: rgb(65, 65, 65);
+    /* text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+  }
+  
+  .card-link {
+    font-size: 1rem;
+    color: rgb(65, 65, 65);
+    text-decoration: none;
+  }
+  
+  .card-link a:hover{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 200;
+    font-size: 25px;
+    transition: all 0.3s ease;
+  }
