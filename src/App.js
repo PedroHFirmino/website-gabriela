@@ -49,6 +49,7 @@ function App() {
           description="Oi, eu sou a Gabriela de Minas Gerais - Brasil" 
           linkText="Ver mais"
         />
+        
       </div>
     </div>
   );
