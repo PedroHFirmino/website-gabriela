@@ -79,17 +79,64 @@
   width: 100%;
 }
 
+/* Smartphone */
+@media (max-width: 767px) {
+  .App-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
 
-.h1 title-body{
-  white-space: nowrap;
-  font-family: 'Adelia', sans-serif;
+  .gabriela-foto {
+    margin: 10px auto;
+    max-height: 25vh;
+  }
+
+  .App h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .App-header ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .App-header ul li {
+    margin: 5px 0;
+  }
+
+  .App-header ul li a {
+    font-size: 18px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .App-header {
+    justify-content: space-between;
+    padding: 20px 50px;
+  }
+
+  .gabriela-foto {
+    margin-left: 20px;
+    max-height: 15vh;
+  }
+
+  .App-header ul li {
+    margin: 0 20px;
+  }
+}
+
+
+#body-title{
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(65, 65, 65);
   display: flex;
-  color: rgb(0, 0, 0);
-  margin: 0;
-  font-size: 33px;
-  font-weight: 500;
-  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-
+  text-align: center;
+  
 }
 
 

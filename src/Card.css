@@ -5,6 +5,7 @@
     justify-content: center;
     margin: 20px;
   }
+
   .card-container a:hover{
     text-decoration: none;
     color: rgb(255, 255, 255);
@@ -44,10 +45,3 @@
     text-decoration: none;
   }
   
-  .card-link a:hover{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-weight: 200;
-    font-size: 25px;
-    transition: all 0.3s ease;
-  }

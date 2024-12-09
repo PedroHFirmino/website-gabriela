@@ -33,10 +33,11 @@ function App() {
           </ul>
         </nav>
       </header>
-      
+
+      <h1 id='body-title'>Meus Produtos</h1>
 
       {/* Cards  */}
-      <h1>Meus Produtos</h1>
+
       <div className="card-container">
         <Card 
           title="E-book Gabriela" 
