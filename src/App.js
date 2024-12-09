@@ -1,6 +1,8 @@
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import gabriela from './img/Gabriela.png';
-import React from 'react';
+import SobrePage from './pages/Sobre';
 import './Card.css';
 
 // Componente Card
@@ -16,64 +18,73 @@ const Card = ({ title, description, linkText }) => {
   );
 };
 
+// Página Home
+const HomePage = () => (
+  <>  
+    <h1 id="body-title">Meus Produtos</h1>
+    {/* Cards */}
+    <div className="card-container">
+      <Card
+        title="Resuminhos"
+        description="Estude de maneira mais clara e objetiva e fixe melhor os conteúdos."
+        linkText="Ver mais"
+      />
+      <Card
+        title="Cronograma de estudos"
+        description="Oi, eu sou a Gabriela de Minas Gerais - Brasil"
+        linkText="Ver mais"
+      />
+      <Card
+        title="E-book Gabriela"
+        description="Esse é meu e-book teste criando o site"
+        linkText="Ver mais"
+      />
+    </div>
+  </>
+);
+
 // Componente principal App
 function App() {
+  const [isMenuActive, setIsMenuActive] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuActive(!isMenuActive);
+  };
+
   return (
-    <div className="App">
-      {/* Cabeçalho */}
-      <header className="App-header">
-        <img src={gabriela} className="gabriela-foto" alt="foto" />
-        <h1>Gabriela Bárbara</h1>
-        <nav className="nav-bar">
-          <ul>
-            <li><a href="/">Início</a></li>
-            <li><a href="/">Sobre mim</a></li>
-            <li><a href="/">Feedbacks</a></li>
-            <li><a href="https://www.instagram.com/umaestudantedefarmacia/" target="_blank" rel="noopener noreferrer">Contato</a></li>
-          </ul>
-        </nav>
-      </header>
+    <Router> {/* Router englobando toda a aplicação */}
+      <div className="App">
+        {/* Cabeçalho */}
+        <header className="App-header">
+          <img src={gabriela} className="gabriela-foto" alt="foto" />
+          <h1>Gabriela Bárbara</h1>
+          <nav className="nav-bar">
+            <ul className={isMenuActive ? 'active' : ''}>
+              <li><Link to="/">Início</Link></li>
+              <li><Link to="/sobre">Sobre mim</Link></li>
+              <li><Link to="/feedbacks">Feedbacks</Link></li>
+              <li>
+                <a href="https://www.instagram.com/umaestudantedefarmacia/" target="_blank" rel="noopener noreferrer">
+                  Contato
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div className="hamburger" id="hamburger" onClick={toggleMenu}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </header>
 
-      <h1 id='body-title'>Meus Produtos</h1>
-
-      {/* Cards  */}
-
-      <div className="card-container">
-        <Card 
-          title="E-book Gabriela" 
-          description="Esse é meu e-book teste criando o site" 
-          linkText="Ver mais"
-        />
-        <Card 
-          title="Cronograma de estudos" 
-          description="Oi, eu sou a Gabriela de Minas Gerais - Brasil" 
-          linkText="Ver mais"
-        />
-                <Card 
-          title="Cronograma de estudos" 
-          description="Oi, eu sou a Gabriela de Minas Gerais - Brasil" 
-          linkText="Ver mais"
-        />
-                <Card 
-          title="E-book Gabriela" 
-          description="Esse é meu e-book teste criando o site" 
-          linkText="Ver mais"
-        />
-        <Card 
-          title="Cronograma de estudos" 
-          description="Oi, eu sou a Gabriela de Minas Gerais - Brasil" 
-          linkText="Ver mais"
-        />
-                <Card 
-          title="Cronograma de estudos" 
-          description="Oi, eu sou a Gabriela de Minas Gerais - Brasil" 
-          linkText="Ver mais"
-        />
-        
-        
-        
+        {/* Rotas */}
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/sobre" element={<SobrePage />} />
+          <Route path="/feedbacks" element={<h1>Feedbacks</h1>} />
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
 }
 
