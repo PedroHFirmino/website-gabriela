@@ -2,46 +2,10 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import gabriela from './img/Gabriela.png';
+import ebook from './img/ebook.jpeg';
 import SobrePage from './pages/Sobre';
 import './Card.css';
 
-// Componente Card
-const Card = ({ title, description, linkText }) => {
-  return (
-    <div className="card">
-      <div className="card-content">
-        <h2 className="card-title">{title}</h2>
-        <p className="card-description">{description}</p>
-        <a href="#" className="card-link">{linkText} →</a>
-      </div>
-    </div>
-  );
-};
-
-// Página Home
-const HomePage = () => (
-  <>  
-    <h1 id="body-title">Meus Produtos</h1>
-    {/* Cards */}
-    <div className="card-container">
-      <Card
-        title="Resuminhos"
-        description="Estude de maneira mais clara e objetiva e fixe melhor os conteúdos."
-        linkText="Ver mais"
-      />
-      <Card
-        title="Cronograma de estudos"
-        description="Oi, eu sou a Gabriela de Minas Gerais - Brasil"
-        linkText="Ver mais"
-      />
-      <Card
-        title="E-book Gabriela"
-        description="Esse é meu e-book teste criando o site"
-        linkText="Ver mais"
-      />
-    </div>
-  </>
-);
 
 // Componente principal App
 function App() {
@@ -82,10 +46,77 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/sobre" element={<SobrePage />} />
           <Route path="/feedbacks" element={<h1>Feedbacks</h1>} />
+          <Route path="/" element={<Footer/>} />
         </Routes>
       </div>
     </Router>
   );
 }
+
+// Componente Card
+const Card = ({ title, description, image, linkText }) => {
+  return (
+    <div className="card">
+      <div className="card-content">
+        <h2 className="card-title">{title}</h2>
+        <p className="card-description">{description}</p>
+        <a href='#'className='image-card'>{image}</a>
+        <a href="#" className="card-link">{linkText} →</a>
+      </div>
+    </div>
+  );
+};
+
+// Página Home
+const HomePage = () => (
+  <>  
+    <h1 id="body-title">Meus Produtos</h1>
+    {/* Cards */}
+    <div className="card-container">
+      <Card
+        title="Resuminhos"
+        description="Estude de maneira mais clara e objetiva e fixe melhor os conteúdos."
+        image={<img src={ebook} className='ebook' alt='ebook'/>}
+        linkText="Ver mais"
+      />
+      <Card
+        title="Cronograma de estudos"
+        description="Oi, eu sou a Gabriela de Minas Gerais - Brasil"
+        image={<img src={ebook} className='ebook' alt='ebook'/>}
+        linkText="Ver mais"
+      />
+      <Card
+        title="E-book Gabriela"
+        description="Esse é meu e-book teste criando o site"
+        linkText="Ver mais"
+      />
+      <Card
+        title="Resuminhos"
+        description="Estude de maneira mais clara e objetiva e fixe melhor os conteúdos."
+        linkText="Ver mais"
+      />
+      <Card
+        title="Cronograma de estudos"
+        description="Oi, eu sou a Gabriela de Minas Gerais - Brasil"
+        linkText="Ver mais"
+      />
+      <Card
+        title="E-book Gabriela"
+        description="Esse é meu e-book teste criando o site"
+        linkText="Ver mais"
+      />
+    </div>
+  </>
+);
+
+const Footer = () => (
+  <>
+  <div className='footer'>
+    <h2>Criado por: Flippy </h2>
+  </div>
+
+  </>
+)
+
 
 export default App;

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Sobre.css';
-import gabriela from '../img/Gabriela2.jpg'
+import gabriela from '../img/Gabriela2.png'
 
 const SobrePage = () => {
   return (

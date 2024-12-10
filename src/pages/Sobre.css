@@ -8,6 +8,8 @@
     font-weight: 500;
     text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     margin: 20px;
+    text-align: center;
+    display: block;
     
 }
 
@@ -16,12 +18,13 @@
     font-size: 20px;
     margin:20px;
     color: #666;
-
-
+    text-align: justify;
+ 
 }
 
-.gabriela-foto2{
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
+.gabriela-foto2 {
+    max-height: 50vh;
+    max-width: 100%; 
+    margin: 20px auto;
+    display: block;
+  }
