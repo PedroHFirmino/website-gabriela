@@ -1,0 +1,23 @@
+.feedbacks h1{
+    white-space: nowrap;
+    font-family: 'Adelia', sans-serif;
+    display: flex;
+    color: #ffcccb;
+    margin: 0;
+    font-size: 33px;
+    font-weight: 500;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    text-align: center;
+    display: block;
+    
+}
+
+.feedbacks p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin:20px;
+    color: #666;
+    text-align: justify;
+ 
+}

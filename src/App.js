@@ -4,10 +4,10 @@ import './App.css';
 import gabriela from './img/Gabriela.png';
 import ebook from './img/ebook.jpeg';
 import SobrePage from './pages/Sobre';
+import Feedbacks from './pages/Feedbacks';
 import instagram from './icon/instagram-brands-solid.svg';
 import facebook from './icon/square-facebook-brands-solid.svg';
 import linkedin from './icon/linkedin-brands-solid.svg';
-
 import './Card.css';
 
 // Componente principal App
@@ -43,13 +43,16 @@ function App() {
             <span></span>
           </div>
         </header>
+        
 
         {/* Rotas */}
+        <div className="body">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/sobre" element={<SobrePage />} />
-          <Route path="/feedbacks" element={<h1>Feedbacks</h1>} />
+          <Route path="/feedbacks" element={<Feedbacks />} />
         </Routes>
+        </div>
 
         {/* Footer */}
         <footer className="footer">
@@ -83,7 +86,7 @@ function App() {
             </div>       
           </div>
           <div className='creator'>
-          <h2>Criado por:Flippy</h2>
+          <h2>Desenvolvido por: Flippy</h2>
           </div>
         </footer>
       </div>
@@ -144,7 +147,11 @@ const HomePage = () => (
         linkText="Ver mais"
       />
     </div>
+    
   </>
+  
 );
+
+
 
 export default App;
