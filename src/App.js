@@ -4,8 +4,11 @@ import './App.css';
 import gabriela from './img/Gabriela.png';
 import ebook from './img/ebook.jpeg';
 import SobrePage from './pages/Sobre';
-import './Card.css';
+import instagram from './icon/instagram-brands-solid.svg';
+import facebook from './icon/square-facebook-brands-solid.svg';
+import linkedin from './icon/linkedin-brands-solid.svg';
 
+import './Card.css';
 
 // Componente principal App
 function App() {
@@ -46,8 +49,43 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/sobre" element={<SobrePage />} />
           <Route path="/feedbacks" element={<h1>Feedbacks</h1>} />
-          <Route path="/" element={<Footer/>} />
         </Routes>
+
+        {/* Footer */}
+        <footer className="footer">
+          <div className='icons'>
+          <a href="https://www.instagram.com/umaestudantedefarmacia/" target="_blank" rel="noopener noreferrer"> 
+        <img src={instagram} className='instagramicon' alt='instagramicon'/></a>
+        <a href="https://www.facebook.com/share/HjbNZ7PGXozdpTQk/?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer">
+        <img src={facebook} className='facebookicon' alt='facebookicon'/></a>
+        <a href="https://www.linkedin.com/in/gabriela-b%C3%A1rbara-5b8192203" target="_blank" rel="noopener noreferrer">
+        <img src={linkedin} className='linkedinicon' alt='linkedinicon'/></a>
+        </div>
+        <h1>Gabriela Bárbara</h1>
+        <div className='categorias'>
+          <div className='categoria'>
+            <h2>Suporte</h2>
+            <p>suporteumaestudantedefarmacia@gmail.com</p>
+            </div>
+            <div className='categoria'>
+            <h2>Parcerias</h2>
+            <p>parceriadagabi@gmail.com</p>
+            </div>
+            <div className='categoria'>
+            <h2>Palestras</h2>
+            <p>palestrasdagabi@gmail.com</p>
+          </div>
+          <div className='categoria'>
+            <h2>Podcast</h2>
+            <a href="https://open.spotify.com/show/3arbFQyofn3bK8HuXzO7qO?si=zlOlXZ_pRaSruaULhf2ccg" target="_blank" rel="noopener noreferrer"> Spotify</a>
+            <a href="https://open.spotify.com/show/3arbFQyofn3bK8HuXzO7qO?si=zlOlXZ_pRaSruaULhf2ccg" target="_blank" rel="noopener noreferrer">Deezer</a>
+            <a href="https://podcasts.apple.com/br/podcast/fala-farma-por-umaestudantedefarmacia/id1783442098" target="_blank" rel="noopener noreferrer">Apple Podcasts</a>
+            </div>       
+          </div>
+          <div className='creator'>
+          <h2>Criado por:Flippy</h2>
+          </div>
+        </footer>
       </div>
     </Router>
   );
@@ -60,7 +98,7 @@ const Card = ({ title, description, image, linkText }) => {
       <div className="card-content">
         <h2 className="card-title">{title}</h2>
         <p className="card-description">{description}</p>
-        <a href='#'className='image-card'>{image}</a>
+        <a href='#' className='image-card'>{image}</a>
         <a href="#" className="card-link">{linkText} →</a>
       </div>
     </div>
@@ -108,15 +146,5 @@ const HomePage = () => (
     </div>
   </>
 );
-
-const Footer = () => (
-  <>
-  <div className='footer'>
-    <h2>Criado por: Flippy </h2>
-  </div>
-
-  </>
-)
-
 
 export default App;
