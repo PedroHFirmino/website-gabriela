@@ -29,6 +29,8 @@ const Feedbacks = () => {
       </div>
 
     </div>
+
+    
   );
 };
 
