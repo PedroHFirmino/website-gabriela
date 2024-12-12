@@ -81,7 +81,7 @@ function App() {
           <div className='categoria'>
             <h2>Podcast</h2>
             <a href="https://open.spotify.com/show/3arbFQyofn3bK8HuXzO7qO?si=zlOlXZ_pRaSruaULhf2ccg" target="_blank" rel="noopener noreferrer"> Spotify</a>
-            <a href="https://open.spotify.com/show/3arbFQyofn3bK8HuXzO7qO?si=zlOlXZ_pRaSruaULhf2ccg" target="_blank" rel="noopener noreferrer">Deezer</a>
+            <a href="https://deezer.page.link/4tjTw1N9Vx4Ci6Ve6" target="_blank" rel="noopener noreferrer">Deezer</a>
             <a href="https://podcasts.apple.com/br/podcast/fala-farma-por-umaestudantedefarmacia/id1783442098" target="_blank" rel="noopener noreferrer">Apple Podcasts</a>
             </div>       
           </div>
