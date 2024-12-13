@@ -2,7 +2,13 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import gabriela from './img/Gabriela.png';
-import ebook from './img/ebook.jpeg';
+import caderno from './img/caderno.png';
+import ebook from './img/ebook.png';
+import bulario from './img/bulario.png';
+import ebookrotina from './img/ebookrotina.png';
+import resumos from './img/resumos.png';
+import guiapratico from './img/guiapratico.png';
+
 import SobrePage from './pages/Sobre';
 import Feedbacks from './pages/Feedbacks';
 import instagram from './icon/instagram-brands-solid.svg';
@@ -17,6 +23,8 @@ function App() {
   const toggleMenu = () => {
     setIsMenuActive(!isMenuActive);
   };
+
+  
 
   return (
     <Router> {/* Router englobando toda a aplicação */}
@@ -115,37 +123,42 @@ const HomePage = () => (
     {/* Cards */}
     <div className="card-container">
       <Card
-        title="Resuminhos"
-        description="Estude de maneira mais clara e objetiva e fixe melhor os conteúdos."
-        image={<img src={ebook} className='ebook' alt='ebook'/>}
+        title="Caderno de atividades"
+        description="Ideal para fixar os fundamentos essenciais da Farmácia."
+        image={<img src={caderno} className='ebook' alt='caderno'/>}
         linkText="Ver mais"
       />
       <Card
-        title="Cronograma de estudos"
-        description="Oi, eu sou a Gabriela de Minas Gerais - Brasil"
-        image={<img src={ebook} className='ebook' alt='ebook'/>}
+        title="Descomplicando o POP"
+        description="Guia essencial para profissionais que desejam dominar os Procedimentos Operacionais Padrão (POP)."
+        image={<img src={ebook} className='ebook' alt='pop'/>}
         linkText="Ver mais"
       />
       <Card
-        title="E-book Gabriela"
-        description="Esse é meu e-book teste criando o site"
+        title="Bulário"
+        description="Pratique e memorize os nomes dos medicamentos de forma facilitada."
+        image={<img src={bulario} className='ebook' alt='bulario'/>}
         linkText="Ver mais"
       />
       <Card
-        title="Resuminhos"
-        description="Estude de maneira mais clara e objetiva e fixe melhor os conteúdos."
+        title="eBook: Rotina de Estudos"
+        description="Prepare-se para alcançar seus objetivos acadêmicos e ter um desempenho incrível em sua jornada universitária."
+        image={<img src={ebookrotina} className='ebook' alt='ebookrotina'/>}
         linkText="Ver mais"
       />
       <Card
-        title="Cronograma de estudos"
-        description="Oi, eu sou a Gabriela de Minas Gerais - Brasil"
+        title="Resumos"
+        description="Estude de maneira objetiva e simplificada com tudo que você precisa para fixar o conteúdo."
+        image={<img src={resumos} className='ebook' alt='resumos'/>}
         linkText="Ver mais"
       />
       <Card
-        title="E-book Gabriela"
-        description="Esse é meu e-book teste criando o site"
+        title="Guia Prático - Recém Formado"
+        description="Feito para te ajudar a iniciar, trazendo dicas valiosas e práticas para quem está começando a carreira na área da Farmácia."
+        image={<img src={guiapratico} className='ebook' alt='guiapratico'/>}
         linkText="Ver mais"
       />
+      
     </div>
     
   </>
