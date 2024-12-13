@@ -25,7 +25,7 @@
 .feedbacks-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
-    gap: 5px; 
+    gap: 20px; 
     justify-items: center; 
     align-items: center; 
     
@@ -39,7 +39,7 @@
   }
   
   .feedbacks-container img:hover {
-    transform: scale(1.1); 
+    transform: scale(1.2); 
   }
   
   .feedback:nth-child(even) {
@@ -53,26 +53,25 @@
   /* Desktop */
   @media (max-width: 768px) {
     .feedbacks-container {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-      gap: 15px; 
+        grid-template-columns: 1fr; 
+        gap: 15px;
     }
-  
+
     .feedbacks-container img {
-      max-width: 100%;
-    
+        max-width: 100%; 
     }
-  }
+}
   
   /* Responsividade para telas muito pequenas (ex.: celulares) */
   @media (max-width: 480px) {
     .feedbacks-container {
-      grid-template-columns: 1fr; 
-      
+        grid-template-columns: 1fr; 
+        gap: 10px; 
     }
-  
+
     .feedbacks-container img {
-      max-width: 100%; 
-    } 
+        max-width: 100%; 
+    }
 
 }
 
