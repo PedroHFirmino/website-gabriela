@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
-import gabriela from './img/Gabriela.png';
+import gabriela from './img/Gabriela.jpeg';
 import caderno from './img/caderno.png';
 import ebook from './img/ebook.png';
 import bulario from './img/bulario.png';
@@ -16,10 +16,12 @@ import guiaestagiario from './img/guiaestagiario.png';
 
 import SobrePage from './pages/Sobre';
 import Feedbacks from './pages/Feedbacks';
+import Caderno from './pages/Caderno';
 import instagram from './icon/instagram-brands-solid.svg';
 import facebook from './icon/square-facebook-brands-solid.svg';
 import linkedin from './icon/linkedin-brands-solid.svg';
 import './Card.css';
+import { ImOpt } from 'react-icons/im';
 
 // Componente principal App
 function App() {
@@ -66,6 +68,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/sobre" element={<SobrePage />} />
           <Route path="/feedbacks" element={<Feedbacks />} />
+          <Route path="/caderno" element={<Caderno/>} />
+
         </Routes>
         </div>
 
@@ -135,7 +139,7 @@ const HomePage = () => (
         title="Caderno de atividades"
         description="Ideal para fixar os fundamentos essenciais da Farmácia."
         image={<img src={caderno} className='ebook' alt='caderno'/>}
-        linkText="Ver mais"
+        linkText={<Link to="/caderno">Ver mais</Link>}
       />
       <Card
         title="Descomplicando o POP"
