@@ -35,16 +35,18 @@ function App() {
     <Router> {/* Router englobando toda a aplicação */}
       <div className="App">
         {/* Cabeçalho */}
-        <header className="App-header">
+        <header className="App-header" id="App-header">
           <img src={gabriela} className="gabriela-foto" alt="foto" />
-          <h1>Gabriela Bárbara</h1>
+          <h1 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            Gabriela Bárbara
+          </h1>
           <nav className="nav-bar">
             <ul className={isMenuActive ? 'active' : ''}>
               <li><Link to="/">Início</Link></li>
               <li><Link to="/sobre">Sobre mim</Link></li>
               <li><Link to="/feedbacks">Feedbacks</Link></li>
               <li>
-                <a href="https://www.instagram.com/umaestudantedefarmacia/" target="_blank" rel="noopener noreferrer">
+                <a href="#footer">
                   Contato
                 </a>
               </li>
@@ -68,7 +70,7 @@ function App() {
         </div>
 
         {/* Footer */}
-        <footer className="footer">
+        <footer className="footer" id="footer">
           <div className='icons'>
           <a href="https://www.instagram.com/umaestudantedefarmacia/" target="_blank" rel="noopener noreferrer"> 
         <img src={instagram} className='instagramicon' alt='instagramicon'/></a>
@@ -77,7 +79,9 @@ function App() {
         <a href="https://www.linkedin.com/in/gabriela-b%C3%A1rbara-5b8192203" target="_blank" rel="noopener noreferrer">
         <img src={linkedin} className='linkedinicon' alt='linkedinicon'/></a>
         </div>
-        <h1>Gabriela Bárbara</h1>
+        <h1 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          Gabriela Bárbara
+        </h1>
         <div className='categorias'>
           <div className='categoria'>
             <h2>Suporte</h2>
@@ -184,7 +188,7 @@ const HomePage = () => (
       <Card
         title="Guia prático do Estagiário"
         description="É um recurso indispensável para ajudar os futuros farmacêuticos a se prepararem para a fase prática de sua formação."
-        image={<img src={guiapraticoanti2} className='ebook' alt='guiapraticoanti2'/>}
+        image={<img src={guiaestagiario} className='ebook' alt='guiaestagiario'/>}
         linkText="Ver mais"
       />
       

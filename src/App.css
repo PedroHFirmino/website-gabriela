@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .App {
   display: flex;
   flex-direction: column;
@@ -467,5 +471,6 @@ a:hover{
     font-size: 0.8rem; /* Ajusta o tamanho para caber bem na tela */
   }
 }
+
 
 
