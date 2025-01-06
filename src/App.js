@@ -8,6 +8,11 @@ import bulario from './img/bulario.png';
 import ebookrotina from './img/ebookrotina.png';
 import resumos from './img/resumos.png';
 import guiapratico from './img/guiapratico.png';
+import etiquetas from './img/etiquetas.jpeg';
+import guiapraticoanti from './img/guiapráticoanti.png';
+import guiapraticoanti2 from './img/guiapraticoanti2.png';
+import guiaestagiario from './img/guiaestagiario.png';
+
 
 import SobrePage from './pages/Sobre';
 import Feedbacks from './pages/Feedbacks';
@@ -94,7 +99,7 @@ function App() {
             </div>       
           </div>
           <div className='creator'>
-          <h2>Desenvolvido por: Flippy</h2>
+          <h2>Desenvolvido por: <a href="https://example.com" target="_blank" rel="noopener noreferrer">Flippy</a></h2>
           </div>
         </footer>
       </div>
@@ -156,6 +161,30 @@ const HomePage = () => (
         title="Guia Prático - Recém Formado"
         description="Feito para te ajudar a iniciar, trazendo dicas valiosas e práticas para quem está começando a carreira na área da Farmácia."
         image={<img src={guiapratico} className='ebook' alt='guiapratico'/>}
+        linkText="Ver mais"
+      />
+      <Card
+        title="Etiquetas de Posologia"
+        description="As etiquetas de posologia ilustradas são uma solução criativa e acessível para auxiliar pacientes que precisam de cuidados especiais."
+        image={<img src={etiquetas} className='ebook' alt='etiquetas'/>}
+        linkText="Ver mais"
+      />
+      <Card
+        title="Guia prático de orientação DO paciente: Anticoncepcionais."
+        description="É um material completo que aborda não apenas os diferentes tipos de anticoncepcionais, mas também seus mecanismos de ação."
+        image={<img src={guiapraticoanti} className='ebook' alt='guiapraticoanti'/>}
+        linkText="Ver mais"
+      />
+      <Card
+        title="Guia prático de orientação AO paciente: Anticoncepcionais."
+        description="É um material completo que aborda não apenas os diferentes tipos de anticoncepcionais, mas também seus mecanismos de ação."
+        image={<img src={guiapraticoanti2} className='ebook' alt='guiapraticoanti2'/>}
+        linkText="Ver mais"
+      />
+      <Card
+        title="Guia prático do Estagiário"
+        description="É um recurso indispensável para ajudar os futuros farmacêuticos a se prepararem para a fase prática de sua formação."
+        image={<img src={guiapraticoanti2} className='ebook' alt='guiapraticoanti2'/>}
         linkText="Ver mais"
       />
       

@@ -359,8 +359,21 @@ a:hover{
   color: #ffffff;
   text-align: justify;
   margin: 10px 0;
+  display: inline;
 
 }
+
+.creator a{
+  display: inline;
+}
+
+.creator a:hover{
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+  color: #ffcccb;
+
+}
+
 
 
 
@@ -427,6 +440,7 @@ a:hover{
 
   .creator h2 {
     font-size: 1rem; /* Reduz o tamanho do texto */
+    
   }
 }
 

@@ -7,7 +7,7 @@ const SobrePage = () => {
     <div className='AboutMe'>
       <h1>Sobre Mim</h1>
       <img src={gabriela} className="gabriela-foto2" alt="foto2" />
-      <p>Sou Gabriela Barbara, farmacêutica formada em 2022, com experiência em farmácia hospitalar e logística farmacêutica. Tenho paixão por compartilhar conhecimento e inspirar pessoas, o que me levou a criar o Instagram @umaestudantedefarmacia , onde ajudo estudantes e profissionais da área a se desenvolverem e serem sua melhor versão.</p>
+      <p>Sou Gabriela Barbara, farmacêutica formada em 2022, com experiência em farmácia hospitalar, drograria e logística farmacêutica. Tenho paixão por compartilhar conhecimento e inspirar pessoas, o que me levou a criar o Instagram @umaestudantedefarmacia , onde ajudo estudantes e profissionais da área a se desenvolverem e serem sua melhor versão.</p>
 
 <p>📚 Pós graduada em: Farmácia Hospitalar e acompanhamento oncologico;</p>
 
