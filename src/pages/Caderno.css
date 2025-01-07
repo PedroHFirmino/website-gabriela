@@ -3,7 +3,9 @@
     align-items: flex-start;
     gap: 20px; 
     margin: 20px auto;
-    max-width: 100%;
+    max-width: 1500px;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .Title h1{
@@ -20,34 +22,62 @@
     display: block;
 }
 
+.text h1{
+    white-space: nowrap;
+    font-family: 'arial', sans-serif;
+    display: flex;
+    color: #666;
+    margin: 0;
+    font-size: 33px;
+    font-weight: 500;
+    padding-top: 50px;
+    margin: 0;
+    text-align: left;
+    display: flex;
+}
+.text h1::after {
+    content: '';
+    flex-grow: 1; 
+    border-bottom: 1px solid #666;
+    margin-left: 20px; 
+    align-self: center; 
+}
+
 
 .caderno {
     max-height: 50vh;
-    max-width: 300px; 
+    max-width: 500px; 
     display: block;
     flex-shrink: 0;
     
 }
 
+.caderno:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
 .text h2{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    margin:20px;
+    margin:0;
     color: #666;
     text-align: justify;
-    margin: 0;
     line-height: 1.5;
+    padding-top: 20px;
 }
 
 .text p{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    margin:20px;
+    margin: 0;
     color: #666;
     text-align: justify;
     margin: 0;
     line-height: 1.5;
+ 
 }
+
 
 
 @media (max-width: 600px) {
@@ -64,4 +94,116 @@
         max-width: 100%; 
         height: auto;
     }
+}
+
+.button-container {
+    margin-top: 60px; 
+    justify-content: center;
+    display: flex;
+    padding-top: 50px;
+}
+
+.button {
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    padding: 25px 35px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    
+}
+
+.button:hover {
+    background-color: #45a049; 
+}
+
+
+.container-vantagens {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; 
+    margin: 20px auto;
+    max-width: 1500px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+
+.vantagens h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin:0;
+    color: #666;
+    text-align: justify;
+    line-height: 1.5;
+    padding-top: 50px;
+    display: block;
+    text-align: left;
+
+}
+
+.vantagens h2::after {
+    content: '';
+    flex-grow: 1; 
+    border-bottom: 1px solid #666;
+    margin-left: 20px; 
+    align-self: center; 
+}
+
+.vantagens p {
+    margin: 0 0 20px 0; 
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin: 0;
+    color: #666;
+}
+
+
+
+.quem-sou-eu-container{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; 
+    margin: 20px auto;
+    max-width: 1500px;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+}
+.quem-sou-eu h1{
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+
+}
+
+.quem-sou-eu p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666;
+
+}
+
+#quem-sou-eu::before,
+#quem-sou-eu::after {
+  content: '';
+  position: absolute;
+  height: 1px; 
+  background-color: rgba(188, 143, 143, 0.7);
+  padding: 0 50px;  
+}
+
+#quem-sou-eu::before {
+  left: 0;
+  top: 50%;
+  width: 50px;  /* Comprimento da linha esquerda */
+}
+
+#quem-sou-eu::after {
+  right: 0;
+  top: 50%;
+  width: 50px;  
 }

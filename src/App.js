@@ -107,7 +107,7 @@ function App() {
             </div>       
           </div>
           <div className='creator'>
-          <h2>Desenvolvido por: <a href="https://example.com" target="_blank" rel="noopener noreferrer">Flippy</a></h2>
+          <h2>Desenvolvido por: <a href="https://www.instagram.com/flippyoficial/" target="_blank" rel="noopener noreferrer">Flippy</a></h2>
           </div>
         </footer>
       </div>
