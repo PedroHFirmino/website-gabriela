@@ -15,7 +15,7 @@ const Caderno = () => {
       <p>
         O Caderno de Atividades é ideal para estudantes e profissionais de Farmácia que desejam praticar e reforçar conceitos básicos da profissão de forma dinâmica e interativa. Com exercícios práticos e espaços para preenchimento, perfeito para quem busca aprender de maneira prática, organizada e personalizada!
       </p>
-      <h2>Adquira já e receba na hora!</h2>
+      <h2>Adquira e receba na hora!</h2>
       <div className="button-container">
     <Link to="https://pay.hotmart.com/W96813088H?sck=HOTMART_PRODUCT_PAGE&off=swuu3o8a&hotfeature=32&_gl=1*1qwvtn8*_gcl_aw*R0NMLjE3MzI2MzgyNTYuQ2owS0NRaUFnSmE2QmhDT0FSSXNBTWlMN1Y5X1dPbk5BTUh3MzNZU3lqRzBsSnVYaE9vUUpXa2haMV9NNVhwalF3aXU1ZlBIb0p4bXdwVWFBc1R2RUFMd193Y0I.*_gcl_au*NjIwMzIzMTUyLjE3MjkxNjc3NDU.*_ga*MTQ3MjAyODA2My4xNzI5MTY3NzQ1*_ga_GQH2V1F11Q*MTczNjI3NDQwNy4xNy4wLjE3MzYyNzQ0MDguNTkuMC4w&bid=1736274427005"  target="_blank" className="button-link">
     <button className="button">Comprar</button>
@@ -35,7 +35,7 @@ const Caderno = () => {
   </div>
     <div className='quem-sou-eu-container'>
       <div className='quem-sou-eu'>
-        <h1>Quem sou eu?</h1>
+        <h2>Quem sou eu?</h2>
         <p>Sou Gabriela Barbara, farmacêutica formada em 2022, com experiência em farmácia hospitalar, drograria e logística farmacêutica. Tenho paixão por compartilhar conhecimento e inspirar pessoas, o que me levou a criar o Instagram @umaestudantedefarmacia , onde ajudo estudantes e profissionais da área a se desenvolverem e serem sua melhor versão.</p>
 
       <p>📚 Pós graduada em: Farmácia Hospitalar e acompanhamento oncologico;</p>

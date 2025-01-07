@@ -229,22 +229,23 @@ html {
 
 #body-title::before,
 #body-title::after {
-  content: '';
+  content: ''; 
   position: absolute;
+  top: 50%; 
+  width: 40%; 
   height: 1px; 
-  background-color: rgba(188, 143, 143, 0.7);
-  padding: 0 50px;  
+  background-color: #666; 
 }
 
 #body-title::before {
   left: 0;
-  top: 50%;
-  width: 50px;  /* Comprimento da linha esquerda */
+  top: 40%;
+  width: 50px;  
 }
 
 #body-title::after {
   right: 0;
-  top: 50%;
+  top: 40%;
   width: 50px;  
 }
 

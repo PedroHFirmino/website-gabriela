@@ -22,6 +22,8 @@
     display: block;
 }
 
+
+
 .text h1{
     white-space: nowrap;
     font-family: 'arial', sans-serif;
@@ -34,6 +36,14 @@
     margin: 0;
     text-align: left;
     display: flex;
+}
+
+.text h1:hover {
+    color: inherit;
+    text-decoration: none; 
+    background: none; 
+    transform: none; 
+    text-shadow: none; 
 }
 .text h1::after {
     content: '';
@@ -144,14 +154,6 @@
 
 }
 
-.vantagens h2::after {
-    content: '';
-    flex-grow: 1; 
-    border-bottom: 1px solid #666;
-    margin-left: 20px; 
-    align-self: center; 
-}
-
 .vantagens p {
     margin: 0 0 20px 0; 
     font-size: 16px;
@@ -174,11 +176,15 @@
     box-sizing: border-box;
 
 }
-.quem-sou-eu h1{
+.quem-sou-eu h2{
     padding-top: 50px;
     padding-bottom: 50px;
-
-
+    position: relative;
+    text-align: center; 
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666;
+    font-size: 45px;
+    
 }
 
 .quem-sou-eu p{
@@ -187,23 +193,23 @@
 
 }
 
-#quem-sou-eu::before,
-#quem-sou-eu::after {
-  content: '';
-  position: absolute;
-  height: 1px; 
-  background-color: rgba(188, 143, 143, 0.7);
-  padding: 0 50px;  
+
+.quem-sou-eu h2::before,
+.quem-sou-eu h2::after {
+    content: ''; 
+    position: absolute;
+    top: 50%; 
+    width: 40%; 
+    height: 1px; 
+    background-color: #666; 
 }
 
-#quem-sou-eu::before {
-  left: 0;
-  top: 50%;
-  width: 50px;  /* Comprimento da linha esquerda */
+.quem-sou-eu h2::before {
+    left: -120px; 
 }
 
-#quem-sou-eu::after {
-  right: 0;
-  top: 50%;
-  width: 50px;  
+.quem-sou-eu h2::after {
+    right: -120px; 
 }
+
+

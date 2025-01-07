@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import gabriela from './img/Gabriela.jpeg';
@@ -30,7 +30,6 @@ function App() {
   const toggleMenu = () => {
     setIsMenuActive(!isMenuActive);
   };
-
   
 
   return (
