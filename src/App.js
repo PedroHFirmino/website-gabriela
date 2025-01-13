@@ -1,4 +1,4 @@
-import React, { useState,} from 'react';
+import React, { useState, useEffect} from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import gabriela from './img/Gabriela.jpeg';
@@ -24,6 +24,7 @@ import Etiquetas from './pages/Etiquetas';
 import GuiaDoPaciente from './pages/GuiaDoPaciente';
 import GuiaAoPaciente from './pages/GuiaAoPaciente';
 import GuiaEstagiario from './pages/GuiaEstagiario';
+import ScrollToTop from './ScrollToTop';
 import instagram from './icon/instagram-brands-solid.svg';
 import facebook from './icon/square-facebook-brands-solid.svg';
 import linkedin from './icon/linkedin-brands-solid.svg';
@@ -37,11 +38,37 @@ function App() {
 
   const toggleMenu = () => {
     setIsMenuActive(!isMenuActive);
+    
   };
-  
+  const closeMenu = () => {
+    setIsMenuActive(false);  
+  };
+
+  useEffect(() => {
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-bar ul");
+
+    hamburger.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+
+    const handleOutsideClick = (event) => {
+      if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
+        navMenu.classList.remove("active");
+      }
+    };
+
+    document.addEventListener("click", handleOutsideClick);
+
+
+    return () => {
+      document.removeEventListener("click", handleOutsideClick);
+    };
+  }, []);
 
   return (
-    <Router> {/* Router englobando toda a aplicação */}
+    <Router> 
+      <ScrollToTop />{/* Router englobando toda a aplicação */}
       <div className="App">
         {/* Cabeçalho */}
         <header className="App-header" id="App-header">
@@ -51,14 +78,10 @@ function App() {
           </h1>
           <nav className="nav-bar">
             <ul className={isMenuActive ? 'active' : ''}>
-              <li><Link to="/">Início</Link></li>
-              <li><Link to="/sobre">Sobre mim</Link></li>
-              <li><Link to="/feedbacks">Feedbacks</Link></li>
-              <li>
-                <a href="#footer">
-                  Contato
-                </a>
-              </li>
+              <li><Link to="/" onClick={closeMenu}>Início</Link></li>
+              <li><Link to="/sobre" onClick={closeMenu}>Sobre mim</Link></li>
+              <li><Link to="/feedbacks" onClick={closeMenu}>Feedbacks</Link></li>
+              <li><a href="#footer" onClick={closeMenu}>Contato</a></li>
             </ul>
           </nav>
           <div className="hamburger" id="hamburger" onClick={toggleMenu}>

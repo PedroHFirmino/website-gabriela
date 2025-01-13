@@ -214,7 +214,7 @@ html {
   justify-content: center;  
   text-align: center;
   font-size: 1.5rem; 
-  margin: 2rem;
+  margin: 5rem;
   position: relative;
   padding: 0 100px;
   cursor: default;
@@ -345,7 +345,7 @@ p{
 
 a{
   font-size: 1.2rem;
-  color: #ffffff;
+  color: #FFFF;
   text-align: justify;
   flex-wrap: wrap;
   display: flex;
@@ -353,6 +353,8 @@ a{
   text-decoration: none;
   
 }
+
+
 
 a:hover{
   transform: scale(1.1);
