@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState,} from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import gabriela from './img/Gabriela.jpeg';
@@ -12,16 +12,24 @@ import etiquetas from './img/etiquetas.jpeg';
 import guiapraticoanti from './img/guiapráticoanti.png';
 import guiapraticoanti2 from './img/guiapraticoanti2.png';
 import guiaestagiario from './img/guiaestagiario.png';
-
-
 import SobrePage from './pages/Sobre';
 import Feedbacks from './pages/Feedbacks';
 import Caderno from './pages/Caderno';
+import Pop from './pages/Pop';
+import Bulario from './pages/Bulario';
+import RotinaEstudos from './pages/RotinaEstudos';
+import Resumos from './pages/Resumos';
+import RecemFormado from './pages/RecemFormado';
+import Etiquetas from './pages/Etiquetas';
+import GuiaDoPaciente from './pages/GuiaDoPaciente';
+import GuiaAoPaciente from './pages/GuiaAoPaciente';
+import GuiaEstagiario from './pages/GuiaEstagiario';
 import instagram from './icon/instagram-brands-solid.svg';
 import facebook from './icon/square-facebook-brands-solid.svg';
 import linkedin from './icon/linkedin-brands-solid.svg';
 import './Card.css';
-import { ImOpt } from 'react-icons/im';
+
+
 
 // Componente principal App
 function App() {
@@ -68,7 +76,15 @@ function App() {
           <Route path="/sobre" element={<SobrePage />} />
           <Route path="/feedbacks" element={<Feedbacks />} />
           <Route path="/caderno" element={<Caderno/>} />
-
+          <Route path="/pop" element={<Pop/>} />
+          <Route path="/bulario" element={<Bulario/>} />
+          <Route path="/rotinaestudos" element={<RotinaEstudos/>} />
+          <Route path="/resumos" element={<Resumos/>} />
+          <Route path="/recemformado" element={<RecemFormado/>} />
+          <Route path="/etiquetas" element={<Etiquetas/>} />
+          <Route path="/guiadopaciente" element={<GuiaDoPaciente/>} />
+          <Route path="/guiaaopaciente" element={<GuiaAoPaciente/>} />
+          <Route path="/guiaestagiario" element={<GuiaEstagiario/>} />
         </Routes>
         </div>
 
@@ -144,55 +160,55 @@ const HomePage = () => (
         title="Descomplicando o POP"
         description="Guia essencial para profissionais que desejam dominar os Procedimentos Operacionais Padrão (POP)."
         image={<img src={ebook} className='ebook' alt='pop'/>}
-        linkText="Ver mais"
+        linkText={<Link to="/pop">Ver mais</Link>}
       />
       <Card
         title="Bulário"
         description="Pratique e memorize os nomes dos medicamentos de forma facilitada."
         image={<img src={bulario} className='ebook' alt='bulario'/>}
-        linkText="Ver mais"
+        linkText={<Link to="/bulario">Ver mais</Link>}
       />
       <Card
         title="eBook: Rotina de Estudos"
         description="Prepare-se para alcançar seus objetivos acadêmicos e ter um desempenho incrível em sua jornada universitária."
         image={<img src={ebookrotina} className='ebook' alt='ebookrotina'/>}
-        linkText="Ver mais"
+        linkText={<Link to="/rotinaestudos">Ver mais</Link>}
       />
       <Card
         title="Resumos"
         description="Estude de maneira objetiva e simplificada com tudo que você precisa para fixar o conteúdo."
         image={<img src={resumos} className='ebook' alt='resumos'/>}
-        linkText="Ver mais"
+        linkText={<Link to="/resumos">Ver mais</Link>}
       />
       <Card
         title="Guia Prático - Recém Formado"
         description="Feito para te ajudar a iniciar, trazendo dicas valiosas e práticas para quem está começando a carreira na área da Farmácia."
         image={<img src={guiapratico} className='ebook' alt='guiapratico'/>}
-        linkText="Ver mais"
+        linkText={<Link to="/recemformado">Ver mais</Link>}
       />
       <Card
         title="Etiquetas de Posologia"
         description="As etiquetas de posologia ilustradas são uma solução criativa e acessível para auxiliar pacientes que precisam de cuidados especiais."
         image={<img src={etiquetas} className='ebook' alt='etiquetas'/>}
-        linkText="Ver mais"
+        linkText={<Link to="/etiquetas">Ver mais</Link>}
       />
       <Card
         title="Guia prático de orientação DO paciente: Anticoncepcionais."
         description="É um material completo que aborda não apenas os diferentes tipos de anticoncepcionais, mas também seus mecanismos de ação."
         image={<img src={guiapraticoanti} className='ebook' alt='guiapraticoanti'/>}
-        linkText="Ver mais"
+        linkText={<Link to="/guiadopaciente">Ver mais</Link>}
       />
       <Card
         title="Guia prático de orientação AO paciente: Anticoncepcionais."
         description="É um material completo que aborda não apenas os diferentes tipos de anticoncepcionais, mas também seus mecanismos de ação."
         image={<img src={guiapraticoanti2} className='ebook' alt='guiapraticoanti2'/>}
-        linkText="Ver mais"
+        linkText={<Link to="/guiaaopaciente">Ver mais</Link>}
       />
       <Card
         title="Guia prático do Estagiário"
         description="É um recurso indispensável para ajudar os futuros farmacêuticos a se prepararem para a fase prática de sua formação."
         image={<img src={guiaestagiario} className='ebook' alt='guiaestagiario'/>}
-        linkText="Ver mais"
+        linkText={<Link to="/guiaestagiario">Ver mais</Link>}
       />
       
     </div>

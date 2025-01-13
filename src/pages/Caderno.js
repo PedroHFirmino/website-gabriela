@@ -1,6 +1,6 @@
 import React from 'react';
-import './Caderno.css';
-import caderno from '../img/caderno.png';
+import './Products.css';
+import caderno from '../img/caderno.png'
 import { Link } from 'react-router-dom';
 
 const Caderno = () => {
